@@ -9,7 +9,7 @@
     <v-card class="mx-auto mt-9" max-width="500" >
       <v-form>
       <v-card-text>
-          <v-text-field v-model="value" label="prenom" required outlined type="text"></v-text-field>
+          <v-text-field v-model="value" label="firstname" required outlined type="text"></v-text-field>
       </v-card-text>
       <v-card-actions>
         <v-col class="text-right">
