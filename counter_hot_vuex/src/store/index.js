@@ -8,7 +8,9 @@ Vue.use(Vuex)
 
 const state = {
     count: 0,
-    members: ''
+    members: [],
+    message: "Welcome to my TODO and COUNT app managment",
+    hasError: false
 }
 
 const store = new Vuex.Store({
