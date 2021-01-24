@@ -3,7 +3,6 @@
     <v-toolbar color="primary" style="padding: 0 2rem">
       <v-toolbar-title>
         <div style="display: flex; align-items: center">
-          <v-icon>fas fa-lock</v-icon>
           <h3 style="margin-left: 8px">{{ auth }}</h3>
         </div>
       </v-toolbar-title>
@@ -25,7 +24,7 @@
 export default {
   name: 'App',
   data: ()=>({
-    auth: "My application",
+    auth: "Auth application",
     items: [
       {
         title: 'Home', route: '/'

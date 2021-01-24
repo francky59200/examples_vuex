@@ -8,7 +8,9 @@ import * as getters from './getters'
 Vue.use(Vuex)
 
 const state = {
-    count: 0
+    count: 0,
+    users:[],
+    hasError: false
 }
 
 const store = new Vuex.Store({
