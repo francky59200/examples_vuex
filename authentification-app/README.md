@@ -1,24 +1,30 @@
-# authentification-app
+# authentification-app with docker-compose
 
-## Project setup
+## Project setup start all contatiners
 ```
-npm install
+docker-compose up
+```
+## Project setup in background
+```
+docker-compose up -d
 ```
 
-### Compiles and hot-reloads for development
+### logs project setup
 ```
-npm run serve
+docker-compose logs
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+docker-compose build
 ```
 
-### Lints and fixes files
+### app
 ```
-npm run lint
+http://localhost:8080/
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### phpmyadmin
+```
+http://localhost:8081/
+```
