@@ -1,18 +1,31 @@
 version: '3'
 
 services:
-  authenticationapp:
-    image: authimage:latest
+  client:
+    container_name: authentification-app_authenticationapp_1
+    build:
+      # either a path to directory containing a dockerfile
+      context: ./
+      # dockerfile with build
+      dockerfile: Dockerfile
     depends_on:
       - mysql
     links:
       - mysql
-    expose:
-      - 8080
-    ports:
-    - 8080:8080
+      # mounted composer cache to the container
+      # performances delegated: the data to the container is predominant over that of the host
     volumes:
-    - ./:/app
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - ./:/usr/src/app
+    ports:
+      - 8080:8080
+      # add interractive shell -it
+    stdin_open: true
+    tty: true
+    # add CHOKIDAR to environnement for hot reloading is watching file changes and polling when the files changes
+    environment:
+      - HOST=0.0.0.0
+      - CHOKIDAR_USEPOLLING=true
   mysql:
     image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
