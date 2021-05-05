@@ -15,7 +15,7 @@
           <v-text-field v-model="firstname" label="firstname" required  type="text"></v-text-field>
         </v-card-text>
         <v-card-actions style="display: flex; justify-content: center">
-          <v-btn tile @click="addElt" color="indigo white--text">validateffffhjkjkpoioo</v-btn>
+          <v-btn tile @click="addElt" color="indigo white--text">validate</v-btn>
         </v-card-actions>
       </v-card>
     </div>
